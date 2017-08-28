@@ -1,0 +1,73 @@
+   public static int[][] matrizA(int linhas, int colunas){
+        int[][]matrizA = new int[linhas][colunas];
+        linhas = leitor.nextInt();
+        colunas = leitor.nextInt();
+        return matrizA;
+    }
+ 
+    public static int [][]dadosMatrizA(int[][]matrizA){
+       for(int i = 0; i < matrizA.length; i++){
+            for(int j = 0; j < matrizA[i].length; j++){
+                matrizA[i][j] = leitor.nextInt();
+            }
+        }
+       return matrizA;
+    }
+    
+    public static void mostrarMatrizA(int[][]matrizA){
+        for(int i = 0; i < matrizA.length; i++){
+            for(int j = 0; i < matrizA[i].length; i++){
+                System.out.printf("Matriz[%d][%d]: %d", i,j, matrizA[i][j]);
+            }
+        }
+    }
+    
+    public static int[][] matrizB(int linhas, int colunas){
+        int[][]matrizB= new int[linhas][colunas];
+        linhas = leitor.nextInt();
+        colunas = leitor.nextInt();
+        return matrizB;
+    }
+ 
+    public static int [][]dadosMatrizB(int[][]matrizB){
+       for(int i = 0; i < matrizB.length; i++){
+            for(int j = 0; j < matrizB[i].length; j++){
+                matrizB[i][j] = leitor.nextInt();
+            }
+        }
+       return matrizB;
+    }
+    
+    public static void mostrarMatrizB(int[][]matrizB){
+        for(int i = 0; i < matrizB.length; i++){
+            for(int j = 0; i < matrizB[i].length; i++){
+                System.out.printf("Matriz[%d][%d]: %d", i,j, matrizB[i][j]);
+            }
+        }
+    }
+    public static int[][] matrizc(int linhas, int colunas){
+        int[][]matrizC = new int[linhas][colunas];
+        linhas = leitor.nextInt();
+        colunas = leitor.nextInt();
+        return matrizC;
+    }
+ 
+    public static int [][]dadosMatrizC(int[][]matrizA, int[][]matrizB){
+        int soma;
+        soma = matrizA + matrizB;
+       return matrizC;
+    }
+    
+    public static void mostrarMatrizC(int[][]matrizC){
+        for(int i = 0; i < matrizC.length; i++){
+            for(int j = 0; i < matrizC[i].length; i++){
+                System.out.printf("Matriz[%d][%d]: %d", i,j, matrizC[i][j]);
+            }
+        }
+    }
+    
+    public static void main(String[] args) {
+        
+    }
+    
+    DICAAAAA: tente fazer um laço para somar todas as linhas e todas as colunas.
