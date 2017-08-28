@@ -1,0 +1,44 @@
+public static int tamanhoMatriz(){
+        int tamanho;
+        System.out.println("Informe o tamanho da matriz (linha/coluna),respectivamente: ");
+        tamanho = leitor.nextInt();
+       return tamanho;
+    }
+    
+    public static int[][] matriz(int linhas, int colunas){
+        int[][]matriz = new int[linhas][colunas];
+        return matriz;
+    }
+ 
+    public static int [][]dadosMatriz(int[][]matriz){
+       for(int i = 0; i < matriz.length; i++){
+            for(int j = 0; j < matriz[i].length; j++){
+                matriz[i][j] = leitor.nextInt();
+            }
+        }
+       return matriz;
+    }
+    
+    public static void mostrarMatriz(int[][]matriz){
+        for(int i = 0; i < matriz.length; i++){
+            for(int j = 0; i < matriz[i].length; i++){
+                System.out.printf("Matriz[%d][%d]: %d", i,j, matriz[i][j]);
+            }
+        }
+    }
+    public static void main(String[] args) {
+        int linhasMatrizA = tamanhoMatriz();
+        int coluasMatrizA = tamanhoMatriz();
+        int [][] matrizA = matriz(linhasMatrizA, coluasMatrizA);
+        matrizA = dadosMatriz(matrizA);
+        mostrarMatriz(matrizA);
+        
+        int linhasMatrizB = tamanhoMatriz();
+        int coluasMatrizB = tamanhoMatriz();
+        int [][] matrizB = matriz(linhasMatrizB, coluasMatrizB);
+        matrizB = dadosMatriz(matrizB);
+        mostrarMatriz(matrizB);
+        
+     
+        
+    }
