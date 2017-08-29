@@ -1,0 +1,52 @@
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+import javax.swing.SwingUtilities;
+
+/**
+ *
+ * @author kelly.fsantos8
+ */
+public class TesteLayout {
+    public static void main(String[] args) {
+            Runnable thread = new Runnable(){
+            public void run(){
+            criarGUI();  
+        }
+        };
+        SwingUtilities.invokeLater(thread);
+    }
+    
+     public static void criarGUI(){
+        final JFrame frame = new JFrame();
+        
+        Dimension dimension = new Dimension(400,600);
+        frame.setMinimumSize(dimension);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setTitle("Layout Test");
+        
+        JPanel panel = new JPanel();
+        panel.setLayout(new GridLayout(2,0));
+        frame.getContentPane().add(panel);
+        
+        JButton button01 = new JButton("Botão 01");
+        panel.add(button01, BorderLayout.NORTH);
+       
+        JButton button02 = new JButton("Botão 02");
+        panel.add(button02, BorderLayout.SOUTH);
+        
+        JButton button3 = new JButton("Botão 03");
+        panel.add(button3, BorderLayout.EAST);
+        
+        
+        
+        
+        frame.pack();
+        frame.setVisible(true);
+}
+}
